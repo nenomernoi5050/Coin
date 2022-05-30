@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MyFirstStartKotlin</string>
+    <string name="symbols_template">%s / %s</string>
+    <string name="lastUpdate">Время последнего обновления: %s</string>
+</resources>

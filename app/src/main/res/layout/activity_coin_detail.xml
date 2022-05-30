@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="4dp"
+    app:cardUseCompatPadding="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivLogoCoin"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_margin="20dp"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvFromSymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="5dp"
+            android:textColor="@color/from"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="@id/tvSlash"
+            app:layout_constraintEnd_toStartOf="@id/tvSlash"
+            app:layout_constraintTop_toTopOf="@id/tvSlash"
+            tools:text="BTC" />
+
+        <TextView
+            android:id="@+id/tvSlash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivLogoCoin"
+
+            android:text="/" />
+
+        <TextView
+            android:id="@+id/tvToSymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="5dp"
+            android:textColor="@color/to"
+            android:textColorLink="@color/design_default_color_on_primary"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="@id/tvSlash"
+            app:layout_constraintStart_toEndOf="@id/tvSlash"
+            app:layout_constraintTop_toTopOf="@id/tvSlash"
+            tools:text="USD" />
+
+
+
+
+        <TextView
+            android:id="@+id/tvPriceLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="15dp"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/text_detail"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSlash"
+            android:text="Цена: " />
+
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16sp"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/tvPriceLabel"
+            app:layout_constraintStart_toEndOf="@id/tvPriceLabel"
+            app:layout_constraintTop_toTopOf="@id/tvPriceLabel"
+            tools:text="7325.5" />
+
+
+        <TextView
+            android:id="@+id/tvMinPriceLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="16sp"
+            android:paddingStart="15dp"
+
+            android:textColor="@color/text_detail"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPriceLabel"
+            android:text="Минимальная за день: " />
+
+
+        <TextView
+            android:id="@+id/tvMinPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="16sp"
+            android:textColor="@color/danger"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@id/tvMinPriceLabel"
+            app:layout_constraintStart_toEndOf="@id/tvMinPriceLabel"
+            app:layout_constraintTop_toTopOf="@id/tvMinPriceLabel"
+            tools:text="7325.5" />
+
+
+        <TextView
+            android:id="@+id/tvMaxPriceLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="15dp"
+
+            android:paddingTop="16sp"
+            android:textColor="@color/text_detail"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvMinPriceLabel"
+            android:text="Максимальная за день: " />
+
+
+        <TextView
+            android:id="@+id/tvMaxPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="16sp"
+            android:textColor="@color/green"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@id/tvMaxPriceLabel"
+            app:layout_constraintStart_toEndOf="@id/tvMaxPriceLabel"
+            app:layout_constraintTop_toTopOf="@id/tvMaxPriceLabel"
+            tools:text="7325.5" />
+
+
+        <TextView
+            android:id="@+id/tvLastSdelkaLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="16sp"
+            android:textColor="@color/text_detail"
+            android:textSize="17sp"
+            android:paddingStart="15dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvMaxPrice"
+            android:text="Последняя сделка: " />
+
+
+        <TextView
+            android:id="@+id/tvLastSdelka"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="16sp"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@id/tvLastSdelkaLabel"
+            app:layout_constraintStart_toEndOf="@id/tvLastSdelkaLabel"
+            app:layout_constraintTop_toTopOf="@id/tvLastSdelkaLabel"
+            tools:text="WarGonzo" />
+
+
+
+
+        <TextView
+            android:id="@+id/tvLastUpdateLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="16sp"
+            android:textColor="@color/text_detail"
+            android:textSize="17sp"
+            android:paddingStart="15dp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLastSdelkaLabel"
+            android:text="Обновлено: " />
+
+        <TextView
+            android:id="@+id/tvLastUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="16sp"
+
+            android:textColor="@color/grey"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toBottomOf="@id/tvLastUpdateLabel"
+            app:layout_constraintStart_toEndOf="@id/tvLastUpdateLabel"
+            app:layout_constraintTop_toTopOf="@id/tvLastUpdateLabel"
+            tools:text="21:52:33" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
